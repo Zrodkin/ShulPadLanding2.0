@@ -54,7 +54,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen mesh-gradient">
+    <div className="min-h-screen">
       <Navigation />
       <Hero />
       <Benefits />

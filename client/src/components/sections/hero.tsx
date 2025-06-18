@@ -4,11 +4,11 @@ import { Play, Check, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden hero-gradient">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 premium-gradient rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 premium-gradient rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 tech-gradient rounded-full opacity-15 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 tech-gradient rounded-full opacity-15 blur-3xl"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -20,7 +20,7 @@ export default function Hero() {
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
               Transform Your iPad Into a{" "}
-              <span className="premium-text-gradient">
+              <span className="tech-text-gradient">
                 Donation Kiosk
               </span>
             </h1>
@@ -65,7 +65,7 @@ export default function Hero() {
             {/* Floating price badge */}
             <div className="absolute -top-4 -right-4 premium-glassmorphism rounded-full px-6 py-3 shadow-2xl noise-texture">
               <div className="text-center">
-                <div className="text-2xl font-bold premium-text-gradient">$49</div>
+                <div className="text-2xl font-bold tech-text-gradient">$49</div>
                 <div className="text-xs text-gray-600">per month</div>
               </div>
             </div>

@@ -47,17 +47,17 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden section-alt">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-64 h-64 premium-gradient rounded-full opacity-10 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 premium-gradient rounded-full opacity-10 blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 tech-gradient rounded-full opacity-8 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 tech-gradient rounded-full opacity-8 blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 fade-in-up">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Why Choose <span className="premium-text-gradient">ShulPad?</span>
+            Why Choose <span className="tech-text-gradient">ShulPad?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional donation kiosks that cost 75% less than competitors and set up in just 15 minutes
