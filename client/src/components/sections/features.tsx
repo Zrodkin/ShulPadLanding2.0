@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Shield } from "lucide-react";
 
 export default function Features() {
   return (
