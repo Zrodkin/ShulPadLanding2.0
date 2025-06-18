@@ -3,11 +3,11 @@ import { Check } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 section-alt">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="glassmorphism p-12 rounded-3xl fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Fundraising?
+        <div className="interactive-card fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            Ready to <span className="tech-text-gradient">Transform</span> Your Fundraising?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Join 500+ organizations using ShulPad to raise more funds with professional donation kiosks. 
