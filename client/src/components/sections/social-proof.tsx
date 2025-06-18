@@ -81,17 +81,73 @@ export default function SocialProof() {
           ))}
         </div>
         
-        {/* Customer Logos */}
+        {/* Trusted Organizations */}
         <div className="mt-16 fade-in-up">
-          <div className="text-center mb-8">
-            <p className="text-gray-600">Trusted by leading organizations</p>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">
+              Trusted by <span className="tech-text-gradient">Leading Organizations</span>
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Join hundreds of nonprofits, religious organizations, and charities using ShulPad to modernize their fundraising
+            </p>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {organizations.map((org, index) => (
-              <div key={index} className="glassmorphism px-6 py-3 rounded-lg">
-                <span className="font-semibold text-gray-700">{org}</span>
+          
+          {/* Logo Grid with Enhanced Design */}
+          <div className="relative">
+            {/* Background decoration */}
+            <div className="absolute inset-0 tech-gradient opacity-5 rounded-3xl blur-3xl"></div>
+            
+            <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {organizations.map((org, index) => (
+                <div 
+                  key={index} 
+                  className="group relative"
+                >
+                  <div className="interactive-card h-20 flex items-center justify-center p-4 transition-all duration-500 hover:scale-105">
+                    <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300"></div>
+                    <span className="relative text-gray-700 font-semibold text-sm text-center leading-tight group-hover:text-gray-900 transition-colors duration-300">
+                      {org}
+                    </span>
+                  </div>
+                  
+                  {/* Subtle glow effect on hover */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Additional trust indicators */}
+          <div className="mt-16 grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 text-white mb-4 mx-auto">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
               </div>
-            ))}
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">SOC 2 Compliant</h4>
+              <p className="text-gray-600 text-sm">Enterprise-grade security standards</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 text-white mb-4 mx-auto">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">PCI DSS Certified</h4>
+              <p className="text-gray-600 text-sm">Secure payment processing</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white mb-4 mx-auto">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h4>
+              <p className="text-gray-600 text-sm">Dedicated customer success team</p>
+            </div>
           </div>
         </div>
       </div>
