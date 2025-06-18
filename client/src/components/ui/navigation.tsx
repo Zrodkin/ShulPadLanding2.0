@@ -22,9 +22,14 @@ export default function Navigation() {
             <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
             <a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
             <a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a>
-            <Button className="brand-gradient text-white px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25">
-              <span className="relative z-10">Start Free Trial</span>
-            </Button>
+           <Button 
+  asChild
+  className="brand-gradient text-white px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+>
+  <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+    <span className="relative z-10">Start Free Trial</span>
+  </a>
+</Button>
           </div>
           
           <Button
@@ -44,9 +49,14 @@ export default function Navigation() {
               <a href="#features" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Features</a>
               <a href="#pricing" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Pricing</a>
               <a href="#faq" className="block px-3 py-2 text-gray-600 hover:text-blue-600">FAQ</a>
-              <Button className="w-full mt-2 brand-gradient text-white">
-                Start Free Trial
-              </Button>
+             <Button 
+  asChild
+  className="w-full mt-2 brand-gradient text-white"
+>
+  <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+    Start Free Trial
+  </a>
+</Button>
             </div>
           </div>
         )}
