@@ -86,15 +86,22 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Button 
-                className={`w-full py-3 rounded-full font-medium ${
-                  plan.popular 
-                    ? 'brand-gradient text-white hover:opacity-90' 
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                }`}
-              >
-                {plan.name === "Enterprise" ? "Contact Sales" : "Start Free Trial"}
-              </Button>
+           <Button 
+  asChild={plan.name !== "Enterprise"}
+  className={`w-full py-3 rounded-full font-medium ${
+    plan.popular 
+      ? 'brand-gradient text-white hover:opacity-90' 
+      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+  }`}
+>
+  {plan.name === "Enterprise" ? (
+    "Contact Sales"
+  ) : (
+    <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+      Start Free Trial
+    </a>
+  )}
+</Button>
             </div>
           ))}
         </div>

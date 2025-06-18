@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Play } from "lucide-react";
 
 export default function CTA() {
   return (

@@ -75,11 +75,16 @@ export default function HowItWorks() {
           })}
         </div>
         
-        <div className="text-center mt-12 fade-in-up">
-          <Button className="brand-gradient text-white px-8 py-4 rounded-full hover:opacity-90 transition-opacity text-lg font-semibold shadow-lg">
-            Get Started Now
-          </Button>
-        </div>
+     <div className="text-center mt-12 fade-in-up">
+  <Button 
+    asChild
+    className="brand-gradient text-white px-12 py-6 rounded-full hover:opacity-90 transition-opacity text-lg font-semibold shadow-lg"
+  >
+    <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+      Get Started Now
+    </a>
+  </Button>
+</div>
       </div>
     </section>
   );

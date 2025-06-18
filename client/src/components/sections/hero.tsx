@@ -28,20 +28,20 @@ export default function Hero() {
               Turn any iPad into a professional fundraising station with payment processing, 
               custom interfaces, and instant receipts. The Square for donations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-             <Button 
-                asChild
-                className="brand-gradient text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 text-lg font-semibold shadow-2xl hover:shadow-purple-500/25 hover:scale-105 glow-effect"
-              >
-                <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
-                  <span className="relative z-10">Start Free Trial</span>
-                </a>
-              </Button>
-              <Button variant="outline" className="premium-glassmorphism text-purple-700 px-8 py-4 rounded-full hover:bg-white/40 text-lg font-semibold transition-all duration-300 hover:scale-105 border-white/40">
-                <Play className="w-4 h-4 mr-2" />
-                Watch Demo
-              </Button>
-            </div>
+<div className="flex flex-col sm:flex-row gap-4 mb-8">
+  <Button 
+    asChild
+    className="brand-gradient text-white px-12 py-6 rounded-full hover:opacity-90 transition-all duration-300 text-lg font-semibold shadow-2xl hover:shadow-purple-500/25 hover:scale-105 glow-effect"
+  >
+    <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+      <span className="relative z-10">Start Free Trial</span>
+    </a>
+  </Button>
+  <Button variant="outline" className="premium-glassmorphism text-purple-700 px-10 py-6 rounded-full hover:bg-white/40 text-lg font-semibold transition-all duration-300 hover:scale-105 border-white/40">
+    <Play className="w-4 h-4 mr-2" />
+    Watch Demo
+  </Button>
+</div>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center">
                 <Check className="w-4 h-4 text-green-500 mr-2" />
