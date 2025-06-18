@@ -22,8 +22,8 @@ export default function Navigation() {
             <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
             <a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
             <a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a>
-            <Button className="brand-gradient text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-medium">
-              Start Free Trial
+            <Button className="brand-gradient text-white px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+              <span className="relative z-10">Start Free Trial</span>
             </Button>
           </div>
           
