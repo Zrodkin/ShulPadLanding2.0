@@ -47,10 +47,18 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-20 w-64 h-64 premium-gradient rounded-full opacity-10 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 premium-gradient rounded-full opacity-10 blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose ShulPad?</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Why Choose <span className="premium-text-gradient">ShulPad?</span>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional donation kiosks that cost 75% less than competitors and set up in just 15 minutes
           </p>
@@ -59,7 +67,7 @@ export default function Benefits() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
-            const colorClasses = {
+            const colorClasses: Record<string, string> = {
               green: "bg-green-100 text-green-600",
               blue: "bg-blue-100 text-blue-600",
               purple: "bg-purple-100 text-purple-600",
@@ -68,7 +76,7 @@ export default function Benefits() {
               teal: "bg-teal-100 text-teal-600"
             };
             
-            const highlightColors = {
+            const highlightColors: Record<string, string> = {
               green: "text-green-600",
               blue: "text-blue-600", 
               purple: "text-purple-600",
@@ -78,13 +86,13 @@ export default function Benefits() {
             };
             
             return (
-              <div key={index} className="glassmorphism p-8 rounded-2xl hover:shadow-xl transition-all duration-300 fade-in-up">
-                <div className={`w-12 h-12 ${colorClasses[benefit.color]} rounded-xl flex items-center justify-center mb-6`}>
-                  <Icon className="w-6 h-6" />
+              <div key={index} className="interactive-card fade-in-up group">
+                <div className={`w-16 h-16 ${colorClasses[benefit.color]} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 mb-4">{benefit.description}</p>
-                <div className={`text-sm ${highlightColors[benefit.color]} font-medium`}>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors">{benefit.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{benefit.description}</p>
+                <div className={`text-sm ${highlightColors[benefit.color]} font-semibold px-3 py-1 rounded-full bg-white/60 inline-block`}>
                   {benefit.highlight}
                 </div>
               </div>

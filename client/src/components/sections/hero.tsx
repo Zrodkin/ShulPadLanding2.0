@@ -1,16 +1,26 @@
 import { Button } from "@/components/ui/button";
 import IPadMockup from "@/components/ui/ipad-mockup";
-import { Play, Check } from "lucide-react";
+import { Play, Check, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 premium-gradient rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 premium-gradient rounded-full opacity-20 blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="fade-in-up">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <div className="inline-flex items-center premium-glassmorphism rounded-full px-6 py-2 mb-6">
+              <Sparkles className="w-4 h-4 mr-2 text-purple-600" />
+              <span className="text-sm font-medium text-gray-700">The Square for Donations</span>
+            </div>
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
               Transform Your iPad Into a{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="premium-text-gradient">
                 Donation Kiosk
               </span>
             </h1>
@@ -19,10 +29,10 @@ export default function Hero() {
               custom interfaces, and instant receipts. The Square for donations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button className="brand-gradient text-white px-8 py-4 rounded-full hover:opacity-90 transition-opacity text-lg font-semibold shadow-lg">
-                Start Free Trial
+              <Button className="brand-gradient text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 text-lg font-semibold shadow-2xl hover:shadow-purple-500/25 hover:scale-105 glow-effect">
+                <span className="relative z-10">Start Free Trial</span>
               </Button>
-              <Button variant="outline" className="glassmorphism text-blue-600 px-8 py-4 rounded-full hover:bg-white/30 text-lg font-semibold">
+              <Button variant="outline" className="premium-glassmorphism text-purple-700 px-8 py-4 rounded-full hover:bg-white/40 text-lg font-semibold transition-all duration-300 hover:scale-105 border-white/40">
                 <Play className="w-4 h-4 mr-2" />
                 Watch Demo
               </Button>
@@ -53,15 +63,15 @@ export default function Hero() {
             </div>
             
             {/* Floating price badge */}
-            <div className="absolute -top-4 -right-4 glassmorphism rounded-full px-6 py-3 shadow-lg">
+            <div className="absolute -top-4 -right-4 premium-glassmorphism rounded-full px-6 py-3 shadow-2xl noise-texture">
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">$49</div>
+                <div className="text-2xl font-bold premium-text-gradient">$49</div>
                 <div className="text-xs text-gray-600">per month</div>
               </div>
             </div>
             
             {/* Floating Square reader */}
-            <div className="absolute -bottom-8 -left-8 glassmorphism rounded-2xl p-4 shadow-lg">
+            <div className="absolute -bottom-8 -left-8 premium-glassmorphism rounded-2xl p-4 shadow-2xl noise-texture">
               <div className="flex items-center space-x-3">
                 <img 
                   src="/attached_assets/Square Reader Tap Transparent_1750274378259.png" 
