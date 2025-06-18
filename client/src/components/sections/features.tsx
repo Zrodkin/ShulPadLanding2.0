@@ -34,31 +34,11 @@ export default function Features() {
             </ul>
           </div>
           <div className="relative">
-            <div className="glassmorphism rounded-3xl p-8 shadow-2xl">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-                <div className="text-center mb-8">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Choose Your Donation</h4>
-                  <p className="text-gray-600">Every contribution makes a difference</p>
-                </div>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <button className="glassmorphism px-6 py-4 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                    $18
-                  </button>
-                  <button className="glassmorphism px-6 py-4 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                    $36
-                  </button>
-                  <button className="glassmorphism px-6 py-4 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                    $100
-                  </button>
-                  <button className="brand-gradient text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-lg">
-                    $180
-                  </button>
-                </div>
-                <button className="glassmorphism px-6 py-4 rounded-xl text-blue-600 font-medium w-full hover:bg-white/50 transition-all">
-                  Enter Custom Amount
-                </button>
-              </div>
-            </div>
+            <img 
+              src="/attached_assets/Mockup-preset_1750274378260.png" 
+              alt="ShulPad donation interface with preset amounts"
+              className="w-full max-w-lg mx-auto rounded-3xl shadow-2xl"
+            />
           </div>
         </div>
         

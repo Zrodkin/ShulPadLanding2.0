@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Hero from "@/components/sections/hero";
 import Benefits from "@/components/sections/benefits";
+import Demo from "@/components/sections/demo";
 import HowItWorks from "@/components/sections/how-it-works";
 import Features from "@/components/sections/features";
 import SocialProof from "@/components/sections/social-proof";
@@ -36,7 +37,8 @@ export default function Home() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+        const target = href ? document.querySelector(href) : null;
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
@@ -56,6 +58,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Benefits />
+      <Demo />
       <HowItWorks />
       <Features />
       <SocialProof />

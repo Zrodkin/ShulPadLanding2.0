@@ -45,39 +45,11 @@ export default function Hero() {
           
           <div className="relative fade-in-up">
             <div className="floating-animation">
-              <IPadMockup>
-                <div className="h-full bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center justify-center p-8">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Donation Amount</h3>
-                    <p className="text-gray-600">Choose your contribution</p>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3 mb-6 w-full">
-                    <button className="glassmorphism px-4 py-3 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                      $18
-                    </button>
-                    <button className="brand-gradient text-white px-4 py-3 rounded-xl text-lg font-semibold shadow-lg">
-                      $36
-                    </button>
-                    <button className="glassmorphism px-4 py-3 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                      $54
-                    </button>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3 mb-6 w-full">
-                    <button className="glassmorphism px-4 py-3 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                      $100
-                    </button>
-                    <button className="glassmorphism px-4 py-3 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                      $180
-                    </button>
-                    <button className="glassmorphism px-4 py-3 rounded-xl text-lg font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
-                      $360
-                    </button>
-                  </div>
-                  <button className="glassmorphism px-6 py-3 rounded-xl text-blue-600 font-medium w-full hover:bg-white/50 transition-all">
-                    Custom Amount
-                  </button>
-                </div>
-              </IPadMockup>
+              <img 
+                src="/attached_assets/Mockup-preset_1750274378260.png" 
+                alt="ShulPad donation interface with preset amounts"
+                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
+              />
             </div>
             
             {/* Floating price badge */}
@@ -91,7 +63,11 @@ export default function Hero() {
             {/* Floating Square reader */}
             <div className="absolute -bottom-8 -left-8 glassmorphism rounded-2xl p-4 shadow-lg">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gray-800 rounded"></div>
+                <img 
+                  src="/attached_assets/Square Reader Tap Transparent_1750274378259.png" 
+                  alt="Square Reader" 
+                  className="w-12 h-12 object-contain"
+                />
                 <div>
                   <div className="text-xs font-semibold text-gray-900">Square Compatible</div>
                   <div className="text-xs text-gray-600">Tap to pay</div>

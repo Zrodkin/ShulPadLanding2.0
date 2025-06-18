@@ -44,9 +44,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 brand-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SP</span>
-              </div>
+              <img 
+                src="/attached_assets/Charity Pad Logo Square_1750274378262.png" 
+                alt="ShulPad Logo" 
+                className="w-8 h-8 rounded-lg"
+              />
               <span className="text-xl font-semibold">ShulPad</span>
             </div>
             <p className="text-gray-400 mb-4">
