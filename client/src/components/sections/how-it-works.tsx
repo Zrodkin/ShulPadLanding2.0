@@ -1,12 +1,12 @@
-import { Link, Palette, Tablet, Rocket } from "lucide-react";
+import { Palette, Tablet, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const steps = [
   {
-    icon: Link,
+    icon: "/attached_assets/Square Logo White.png", // Your uploaded Square logo
     title: "Connect Square",
     description: "Link your existing Square account or create a new one in minutes.",
-    gradient: "brand-gradient"
+    gradient: "square-gradient"
   },
   {
     icon: Palette,
@@ -43,12 +43,26 @@ export default function HowItWorks() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => {
-            const Icon = step.icon;
+            const IconOrImage = step.icon;
+            const isImagePath = typeof IconOrImage === 'string';
+            
             return (
               <div key={index} className="text-center fade-in-up">
                 <div className="relative mb-8">
                   <div className={`w-20 h-20 ${step.gradient} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}>
-                    <Icon className="w-8 h-8 text-white" />
+                    {isImagePath ? (
+                      <img 
+                        src={IconOrImage}
+                        alt={`${step.title} icon`}
+                        className="object-contain"
+                        style={{
+                          width: '40px',
+                          height: '40px'
+                        }}
+                      />
+                    ) : (
+                      <IconOrImage className="w-8 h-8 text-white" />
+                    )}
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
                     <span className="text-blue-600 font-bold">{index + 1}</span>

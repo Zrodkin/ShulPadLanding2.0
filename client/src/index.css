@@ -125,6 +125,52 @@
     );
     border-radius: inherit;
   }
+  
+   .accent-gradient {
+    background: linear-gradient(135deg, 
+      hsl(270, 58%, 73%) 0%, 
+      hsl(324, 40%, 56%) 100%
+    );
+    position: relative;
+  }
+
+  .accent-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+    border-radius: inherit;
+  }
+
+  .square-gradient {
+  background: linear-gradient(135deg, 
+    hsl(0, 0%, 15%) 0%, 
+    hsl(0, 0%, 35%) 100%
+  );
+  position: relative;
+}
+
+.square-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  border-radius: inherit;
+}
 
   .hero-gradient {
     background: 
