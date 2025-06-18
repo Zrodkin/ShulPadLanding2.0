@@ -44,10 +44,12 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
+    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 section-dark">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Frequently Asked <span className="tech-text-gradient">Questions</span>
+          </h2>
           <p className="text-xl text-gray-600">
             Everything you need to know about ShulPad
           </p>

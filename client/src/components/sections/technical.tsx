@@ -59,10 +59,12 @@ const hardware = [
 
 export default function Technical() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 section-alt">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Specifications</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Technical <span className="tech-text-gradient">Specifications</span>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Compatible with your existing hardware and secure by design
           </p>

@@ -1,17 +1,17 @@
 export default function Demo() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden section-dark">
       {/* Dynamic background pattern */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 premium-gradient rounded-full opacity-20 blur-2xl animate-bounce"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 premium-gradient rounded-full opacity-20 blur-2xl animate-bounce delay-500"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 premium-gradient rounded-full opacity-5 blur-3xl"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 tech-gradient rounded-full opacity-15 blur-2xl animate-bounce"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 tech-gradient rounded-full opacity-15 blur-2xl animate-bounce delay-500"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 tech-gradient rounded-full opacity-3 blur-3xl"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 fade-in-up">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            See <span className="premium-text-gradient">ShulPad</span> in Action
+            See <span className="tech-text-gradient">ShulPad</span> in Action
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Watch how easy it is for donors to contribute with our intuitive interface
@@ -80,11 +80,11 @@ export default function Demo() {
         <div className="mt-16 text-center fade-in-up">
           <div className="interactive-card max-w-3xl mx-auto noise-texture">
             <h3 className="text-2xl lg:text-3xl font-semibold mb-6">
-              <span className="premium-text-gradient">Secure Payment Processing</span>
+              <span className="tech-text-gradient">Secure Payment Processing</span>
             </h3>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
               <div className="relative">
-                <div className="absolute inset-0 premium-gradient rounded-full opacity-20 blur-xl animate-pulse"></div>
+                <div className="absolute inset-0 tech-gradient rounded-full opacity-20 blur-xl animate-pulse"></div>
                 <img 
                   src="/attached_assets/Square Reader Tap Transparent_1750274378259.png" 
                   alt="Square Reader for contactless payments"

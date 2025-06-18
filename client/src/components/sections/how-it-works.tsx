@@ -30,10 +30,12 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 section-alt">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            How <span className="tech-text-gradient">It Works</span>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get your donation kiosk running in four simple steps
           </p>

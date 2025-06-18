@@ -37,11 +37,13 @@ const organizations = [
 
 export default function SocialProof() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 section-alt">
       <div className="max-w-7xl mx-auto">
         {/* Stats */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Trusted by Nonprofits Worldwide</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-8">
+            Trusted by <span className="tech-text-gradient">Nonprofits</span> Worldwide
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="glassmorphism p-8 rounded-2xl">

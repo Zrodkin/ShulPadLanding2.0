@@ -2,10 +2,12 @@ import { Check, Shield } from "lucide-react";
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
+    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 section-dark">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Powerful <span className="tech-text-gradient">Features</span>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Everything you need to create professional donation experiences
           </p>

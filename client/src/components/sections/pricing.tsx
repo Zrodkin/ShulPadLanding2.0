@@ -45,10 +45,12 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 section-dark">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Simple, <span className="tech-text-gradient">Transparent</span> Pricing
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             No hidden fees. No setup costs. Cancel anytime.
           </p>
