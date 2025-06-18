@@ -14,10 +14,10 @@ export default function CTA() {
             Start your free 30-day trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button className="brand-gradient text-white px-8 py-4 rounded-full hover:opacity-90 transition-opacity text-lg font-semibold shadow-lg">
+            <Button className="btn-primary text-lg">
               Start Free Trial
             </Button>
-            <Button variant="outline" className="glassmorphism text-blue-600 px-8 py-4 rounded-full hover:bg-white/30 text-lg font-semibold">
+            <Button className="btn-secondary text-lg">
               Schedule Demo
             </Button>
           </div>
