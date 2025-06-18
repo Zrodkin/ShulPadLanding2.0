@@ -64,7 +64,7 @@ export default function Hero() {
             <img 
   src="/attached_assets/Mockup-preset_1750274378260.png" 
   alt="ShulPad donation interface with preset amounts"
-  className="w-full max-w-md mx-auto rounded-3xl shadow-2xl transform scale-125"
+  className="w-full max-w-md mx-auto rounded-3xl shadow-2xl transform scale-150"
 />
             </div>
             
