@@ -18,12 +18,13 @@ export default function Hero() {
               <Sparkles className="w-4 h-4 mr-2 text-purple-600" />
               <span className="text-sm font-medium text-gray-700">The Square for Donations</span>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-              Transform Your iPad Into a{" "}
-              <span className="tech-text-gradient">
-                Donation Kiosk
-              </span>
-            </h1>
+         <h1 className="font-bold leading-tight mb-6">
+<span className="text-3xl lg:text-5xl block font-normal text-gray-700">Your Solution To</span>
+{" "}
+  <span className="tech-text-gradient text-5xl lg:text-7xl">
+    Fundraising
+  </span>
+</h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Turn any iPad into a professional fundraising station with payment processing, 
               custom interfaces, and instant receipts. The Square for donations.
@@ -60,11 +61,11 @@ export default function Hero() {
           
           <div className="relative fade-in-up">
             <div className="floating-animation">
-              <img 
-                src="/attached_assets/Mockup-preset_1750274378260.png" 
-                alt="ShulPad donation interface with preset amounts"
-                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
-              />
+            <img 
+  src="/attached_assets/Mockup-preset_1750274378260.png" 
+  alt="ShulPad donation interface with preset amounts"
+  className="w-full max-w-md mx-auto rounded-3xl shadow-2xl transform scale-125"
+/>
             </div>
             
             {/* Floating price badge */}

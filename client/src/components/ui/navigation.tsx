@@ -15,8 +15,8 @@ export default function Navigation() {
               alt="ShulPad Logo" 
               className="w-8 h-8 rounded-lg"
             />
-            <span className="text-xl font-semibold text-gray-900">ShulPad</span>
-          </div>
+<span className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'EB Garamond', serif"}}>ShulPad</span>
+</div>
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
