@@ -19,10 +19,10 @@ export default function Hero() {
               <span className="text-sm font-medium text-gray-700">The Square for Donations</span>
             </div>
          <h1 className="font-bold leading-tight mb-6">
-<span className="text-3xl lg:text-5xl block font-normal text-gray-700">Your Solution To</span>
+<span className="text-3xl lg:text-5xl block font-normal text-gray-700">The Future of Contactless</span>
 {" "}
   <span className="tech-text-gradient text-5xl lg:text-7xl">
-    Fundraising
+    Donations
   </span>
 </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">

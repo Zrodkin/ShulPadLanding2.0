@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import WhatsAppWidget from "@/components/ui/whatsapp-widget";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/sections/footer";
 import {
@@ -503,6 +504,7 @@ export default function Privacy() {
       </main>
 
       <Footer />
+      <WhatsAppWidget /> 
     </div>
   );
 }

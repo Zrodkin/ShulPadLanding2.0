@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import WhatsAppWidget from "@/components/ui/whatsapp-widget";
 import Navigation from "@/components/ui/navigation";
 import Hero from "@/components/sections/hero";
 import Benefits from "@/components/sections/benefits";
@@ -54,19 +55,20 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <Benefits />
-      <Demo />
-      <HowItWorks />
-      <Features />
-      <SocialProof />
-      <Pricing />
-      <Technical />
-      <FAQ />
-      <CTA />
-      <Footer />
-    </div>
-  );
+  <div className="min-h-screen">
+    <Navigation />
+    <Hero />
+    <Benefits />
+    <Demo />
+    <HowItWorks />
+    <Features />
+    <SocialProof />
+    <Pricing />
+    <Technical />
+    <FAQ />
+    <CTA />
+    <Footer />
+    <WhatsAppWidget /> 
+  </div>
+);
 }
