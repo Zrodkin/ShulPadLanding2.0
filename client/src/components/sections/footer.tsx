@@ -6,34 +6,34 @@ const footerSections = [
     links: [
       { name: "Features", href: "#features" },
       { name: "Pricing", href: "#pricing" },
-      { name: "Security", href: "#" },
-      { name: "Integrations", href: "#" }
+      { name: "Demo", href: "#demo" },
+      { name: "FAQ", href: "#faq" }
     ]
   },
   {
     title: "Support", 
     links: [
-      { name: "Help Center", href: "#" },
-      { name: "Contact Us", href: "#" },
-      { name: "Hardware Guide", href: "#" },
-      { name: "API Docs", href: "#" }
+      { name: "Contact Us", href: "/contact" },  // ← Updated to real page
+      { name: "WhatsApp", href: "https://wa.me/16179032387" },
+      { name: "Phone Support", href: "tel:+16179032387" },
+      { name: "Schedule Demo", href: "mailto:info@shulpad.com?subject=Demo Request" }
     ]
   },
   {
-    title: "Company",
+    title: "Resources",
     links: [
-      { name: "About", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Press", href: "#" }
+      { name: "User Guide", href: "/user-guide" },
+      { name: "Hardware Requirements", href: "/hardware-requirements" },
+      { name: "Integration Help", href: "/integration-help" },
+      { name: "Security Info", href: "/security-info" }
     ]
   }
 ];
 
 const legalLinks = [
   { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms of Service", href: "#" },
-  { name: "Cookie Policy", href: "#" }
+  { name: "Terms", href: "/terms" },  // ← Updated to real page
+  { name: "Contact Legal", href: "mailto:info@shulpad.com?subject=Legal Inquiry" }
 ];
 
 export default function MobileOptimizedFooter() {
@@ -57,16 +57,40 @@ export default function MobileOptimizedFooter() {
               Transform any iPad into a professional donation kiosk. The Square for donations.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a 
+                href="https://twitter.com/shulpad" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Follow ShulPad on Twitter"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a 
+                href="https://linkedin.com/company/shulpad" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Connect with ShulPad on LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a 
+                href="https://facebook.com/shulpad" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Like ShulPad on Facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a 
+                href="https://instagram.com/shulpad" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Follow ShulPad on Instagram"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -79,7 +103,13 @@ export default function MobileOptimizedFooter() {
               <ul className="space-y-2 text-gray-400">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href={link.href} className="hover:text-white transition-colors">
+                    <a 
+                      href={link.href} 
+                      className="hover:text-white transition-colors"
+                      {...(link.href.startsWith('http') || link.href.startsWith('mailto:') || link.href.startsWith('tel:') ? 
+                        { target: link.href.startsWith('http') ? '_blank' : undefined, rel: link.href.startsWith('http') ? 'noopener noreferrer' : undefined } : 
+                        {})}
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -108,28 +138,36 @@ export default function MobileOptimizedFooter() {
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
               <a 
-                href="#" 
+                href="https://twitter.com/shulpad"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors p-2 -m-2"
                 aria-label="Follow us on Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://linkedin.com/company/shulpad"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors p-2 -m-2"
                 aria-label="Connect with us on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://facebook.com/shulpad"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors p-2 -m-2"
                 aria-label="Like us on Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://instagram.com/shulpad"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors p-2 -m-2"
                 aria-label="Follow us on Instagram"
               >
@@ -151,6 +189,9 @@ export default function MobileOptimizedFooter() {
                       <a 
                         href={link.href} 
                         className="text-gray-400 hover:text-white transition-colors text-xs block py-1"
+                        {...(link.href.startsWith('http') || link.href.startsWith('mailto:') || link.href.startsWith('tel:') ? 
+                          { target: link.href.startsWith('http') ? '_blank' : undefined, rel: link.href.startsWith('http') ? 'noopener noreferrer' : undefined } : 
+                          {})}
                       >
                         {link.name}
                       </a>
@@ -169,7 +210,14 @@ export default function MobileOptimizedFooter() {
           </div>
           <div className="flex space-x-6 text-sm text-gray-400 mt-4 md:mt-0">
             {legalLinks.map((link, index) => (
-              <a key={index} href={link.href} className="hover:text-white transition-colors">
+              <a 
+                key={index} 
+                href={link.href} 
+                className="hover:text-white transition-colors"
+                {...(link.href.startsWith('http') || link.href.startsWith('mailto:') ? 
+                  { target: link.href.startsWith('mailto:') ? undefined : '_blank', rel: link.href.startsWith('http') ? 'noopener noreferrer' : undefined } : 
+                  {})}
+              >
                 {link.name}
               </a>
             ))}
