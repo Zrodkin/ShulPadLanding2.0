@@ -85,7 +85,7 @@ export default function MobileOptimizedFooter() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="https://instagram.com/shulpad" 
+                href="https://instagram.com/shulpadhq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -165,7 +165,7 @@ export default function MobileOptimizedFooter() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="https://instagram.com/shulpad"
+                href="https://instagram.com/shulpadhq"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors p-2 -m-2"
