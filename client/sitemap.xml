@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main homepage -->
+  <url>
+    <loc>https://shulpad.com/</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Pricing section (highest priority for business) -->
+  <url>
+    <loc>https://shulpad.com/#pricing</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Demo section (high priority for conversions) -->
+  <url>
+    <loc>https://shulpad.com/#demo</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Technical section (important for product understanding) -->
+  <url>
+    <loc>https://shulpad.com/#technical</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- FAQ section (helpful for support) -->
+  <url>
+    <loc>https://shulpad.com/#faq</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Privacy Policy (required but lower priority) -->
+  <url>
+    <loc>https://shulpad.com/privacy</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

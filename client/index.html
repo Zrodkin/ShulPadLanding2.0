@@ -3,27 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>ShulPad - Transform Your iPad Into a Donation Kiosk</title>
-    <meta name="description" content="Turn any iPad into a professional fundraising station with payment processing, custom interfaces, and instant receipts. The Square for donations - starting at $49/month." />
     
-    <!-- Open Graph tags -->
+    <!-- Primary Meta Tags -->
+    <title>ShulPad - Transform Your iPad Into a Donation Kiosk</title>
+    <meta name="title" content="ShulPad - Transform Your iPad Into a Donation Kiosk" />
+    <meta name="description" content="Turn any iPad into a professional fundraising station with payment processing, custom interfaces, and instant receipts. The Square for donations - starting at $49/month." />
+    <meta name="keywords" content="donation kiosk, fundraising, iPad donation, nonprofit technology, Square donations, charity kiosk, contactless donations" />
+    <meta name="author" content="ShulPad" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shulpad.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shulpad.com/" />
     <meta property="og:title" content="ShulPad - Transform Your iPad Into a Donation Kiosk" />
     <meta property="og:description" content="Professional donation kiosks that cost 75% less than competitors. Turn any iPad into a fundraising station in 15 minutes." />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://shulpad.com/attached_assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="ShulPad" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://shulpad.com/" />
+    <meta property="twitter:title" content="ShulPad - Transform Your iPad Into a Donation Kiosk" />
+    <meta property="twitter:description" content="Professional donation kiosks that cost 75% less than competitors. Turn any iPad into a fundraising station in 15 minutes." />
+    <meta property="twitter:image" content="https://shulpad.com/attached_assets/og-image.png" />
+    <meta property="twitter:creator" content="@shulpad" />
+    
+    <!-- Favicons - Multiple sizes for better compatibility -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/attached_assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/attached_assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/attached_assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/attached_assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/attached_assets/android-chrome-512x512.png">
+    <link rel="icon" type="image/x-icon" href="/attached_assets/favicon.ico">
+    <link rel="manifest" href="/attached_assets/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ShulPad",
+      "description": "Transform any iPad into a professional donation kiosk with payment processing, custom interfaces, and instant receipts.",
+      "url": "https://shulpad.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "49",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "RecurringCharge",
+          "frequency": "Monthly"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ShulPad",
+        "url": "https://shulpad.com",
+        "logo": "https://shulpad.com/attached_assets/Charity Pad Logo Square_1750274378262.png"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      }
+    }
+    </script>
     
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/attached_assets/apple-touch-icon_1750274387856.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/attached_assets/android-chrome-512x512_1750274387858.png">
+    <!-- Domain verification (add your verification codes here) -->
+    <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" /> -->
+    <!-- <meta name="bing-site-verification" content="YOUR_BING_VERIFICATION_CODE" /> -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
   </body>
 </html>

@@ -1,16 +1,16 @@
-import { DollarSign, Clock, Shield, Receipt, BarChart3, WifiOff } from "lucide-react";
+import { Sparkles, Clock, Shield, Receipt, BarChart3, WifiOff } from "lucide-react";
 
 const benefits = [
   {
-    icon: DollarSign,
-    title: "75% Cost Savings",
-    description: "$49/month vs $200-500/month competitors charge. More funds for your cause.",
-    highlight: "Save $1,800+ annually",
+    icon: Sparkles,
+    title: "Premium Design",
+    description: "Sleek, modern kiosks that elevate your brand with clean aesthetics and professional appeal.",
+    highlight: "Most elegant design",
     color: "green"
   },
   {
     icon: Clock,
-    title: "15-Minute Setup",
+    title: "30-Second Setup",
     description: "Connect your Square account, customize interface, and start accepting donations.",
     highlight: "Launch same day",
     color: "blue"
@@ -48,10 +48,25 @@ const benefits = [
 export default function Benefits() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden section-alt">
-      {/* Animated background elements */}
+      {/* Animated background elements - very subtle ambient wash on mobile */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-64 h-64 tech-gradient rounded-full opacity-8 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 tech-gradient rounded-full opacity-8 blur-3xl animate-pulse delay-1000"></div>
+        {/* Mobile: Multiple extremely subtle ambient background elements */}
+        <div className="sm:hidden absolute -top-32 -right-32 w-96 h-96 tech-gradient rounded-full opacity-[0.02] blur-3xl"></div>
+        <div className="sm:hidden absolute -bottom-32 -left-32 w-96 h-96 tech-gradient rounded-full opacity-[0.02] blur-3xl"></div>
+        <div className="sm:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full tech-gradient rounded-full opacity-[0.01] blur-3xl"></div>
+        <div className="sm:hidden absolute top-16 left-1/4 w-80 h-80 tech-gradient rounded-full opacity-[0.015] blur-3xl"></div>
+        <div className="sm:hidden absolute bottom-16 right-1/4 w-80 h-80 tech-gradient rounded-full opacity-[0.015] blur-3xl"></div>
+        <div className="sm:hidden absolute top-1/3 -left-16 w-72 h-72 tech-gradient rounded-full opacity-[0.01] blur-3xl"></div>
+        <div className="sm:hidden absolute bottom-1/3 -right-16 w-72 h-72 tech-gradient rounded-full opacity-[0.01] blur-3xl"></div>
+        <div className="sm:hidden absolute top-3/4 left-1/3 w-64 h-64 tech-gradient rounded-full opacity-[0.008] blur-3xl"></div>
+        
+        {/* Tablet: Balanced coverage */}
+        <div className="hidden sm:block md:hidden absolute top-10 right-10 w-48 h-48 tech-gradient rounded-full opacity-3 blur-3xl animate-pulse"></div>
+        <div className="hidden sm:block md:hidden absolute bottom-10 left-10 w-48 h-48 tech-gradient rounded-full opacity-3 blur-3xl animate-pulse delay-1000"></div>
+        
+        {/* Desktop: Original full effect */}
+        <div className="hidden md:block absolute top-20 right-20 w-64 h-64 tech-gradient rounded-full opacity-8 blur-3xl animate-pulse"></div>
+        <div className="hidden md:block absolute bottom-20 left-20 w-64 h-64 tech-gradient rounded-full opacity-8 blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -64,7 +79,7 @@ export default function Benefits() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             const colorClasses: Record<string, string> = {
@@ -86,14 +101,31 @@ export default function Benefits() {
             };
             
             return (
-              <div key={index} className="interactive-card fade-in-up group">
-                <div className={`w-16 h-16 ${colorClasses[benefit.color]} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8" />
+              <div key={index}>
+                {/* Mobile: 2-column compact cards */}
+                <div className="md:hidden bg-white border border-gray-200 rounded-lg p-3 h-full flex flex-col">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className={`w-8 h-8 ${colorClasses[benefit.color]} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-gray-900 leading-tight">{benefit.title}</h3>
+                  </div>
+                  <p className="text-xs text-gray-600 mb-2 leading-relaxed flex-grow">{benefit.description}</p>
+                  <div className={`text-xs ${highlightColors[benefit.color]} font-medium px-2 py-1 rounded bg-gray-50 inline-block mt-auto`}>
+                    {benefit.highlight}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors">{benefit.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{benefit.description}</p>
-                <div className={`text-sm ${highlightColors[benefit.color]} font-semibold px-3 py-1 rounded-full bg-white/60 inline-block`}>
-                  {benefit.highlight}
+
+                {/* Desktop: Original design */}
+                <div className="hidden md:block interactive-card fade-in-up group">
+                  <div className={`w-16 h-16 ${colorClasses[benefit.color]} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors">{benefit.title}</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{benefit.description}</p>
+                  <div className={`text-sm ${highlightColors[benefit.color]} font-semibold px-3 py-1 rounded-full bg-white/60 inline-block`}>
+                    {benefit.highlight}
+                  </div>
                 </div>
               </div>
             );

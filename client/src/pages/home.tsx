@@ -58,13 +58,20 @@ export default function Home() {
   <div className="min-h-screen">
     <Navigation />
     <Hero />
+     <Demo />
+      <Technical />
     <Benefits />
-    <Demo />
-    <HowItWorks />
-    <Features />
-    <SocialProof />
+   
+    <div className="hidden md:block">
+      <Features />
+    </div>
+    
+    <div className="hidden md:block">
+      <SocialProof />
+    </div>
+    
     <Pricing />
-    <Technical />
+   
     <FAQ />
     <CTA />
     <Footer />
