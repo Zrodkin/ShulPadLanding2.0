@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
   "functions": {
     "api/contact.ts": {
       "runtime": "@vercel/node@5.3.0"
@@ -6,5 +8,15 @@
     "api/health.ts": {
       "runtime": "@vercel/node@5.3.0"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
