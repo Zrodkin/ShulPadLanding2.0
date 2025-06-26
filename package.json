@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsx api/index.ts",
-    "build": "vite build",
-    "preview": "NODE_ENV=production tsx api/index.ts",
+    "build": "tsc --noEmit false && vite build",
+    "preview": "NODE_ENV=production tsx api/index.ts", 
     "check": "tsc"
   },
   "dependencies": {
