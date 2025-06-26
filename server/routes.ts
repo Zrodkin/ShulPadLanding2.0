@@ -30,7 +30,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Contact form submission endpoint
-  app.post("/api/contact", async (req: Request, res: Response) => {
+  app.post("/api/contact", async (req: Request, res: Response): Promise<void> => {
     try {
       // Validate the request body
       const validatedData = contactFormSchema.parse(req.body);
@@ -38,10 +38,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Check if Resend API key is configured
       if (!process.env.RESEND_API_KEY || !process.env.EMAIL_TO) {
         console.error("Resend configuration missing");
-        return res.status(500).json({ 
+        res.status(500).json({ 
           success: false, 
           message: "Email service not configured" 
         });
+        return;
       }
 
       // Send email using Resend
@@ -63,10 +64,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       if (error) {
         console.error("Resend error:", error);
-        return res.status(500).json({ 
+        res.status(500).json({ 
           success: false, 
           message: "Failed to send message. Please try again." 
         });
+        return;
       }
 
       console.log(`Contact form submission sent successfully. Email ID: ${data?.id}`);
@@ -82,11 +84,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Handle validation errors
       if (error instanceof z.ZodError) {
-        return res.status(400).json({
+        res.status(400).json({
           success: false,
           message: "Invalid form data",
           errors: error.errors
         });
+        return;
       }
 
       // Handle other errors
