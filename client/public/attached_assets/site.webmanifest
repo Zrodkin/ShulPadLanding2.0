@@ -1,0 +1,23 @@
+{
+  "name": "ShulPad - Donation Kiosk Platform",
+  "short_name": "ShulPad",
+  "description": "Transform any iPad into a professional donation kiosk",
+  "icons": [
+    {
+      "src": "/attached_assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/attached_assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#6366f1",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}
