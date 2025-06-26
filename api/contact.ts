@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 import { z } from 'zod';
-// Validation schema for contact form
+
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Valid email is required"),
@@ -10,11 +10,9 @@ const contactFormSchema = z.object({
   message: z.string().min(1, "Message is required").max(1000)
 });
 
-// Initialize Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // Handle CORS for browser requests
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -28,22 +26,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // Validate the request body
     const validatedData = contactFormSchema.parse(req.body);
     
-    // Check if Resend API key is configured
-    if (!process.env.RESEND_API_KEY || !process.env.EMAIL_TO) {
-      console.error("Resend configuration missing");
+    if (!process.env.RESEND_API_KEY) {
       return res.status(500).json({ 
         success: false, 
         message: "Email service not configured" 
       });
     }
 
-    // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'ShulPad Contact <onboarding@resend.dev>',
-      to: [process.env.EMAIL_TO!],
+      from: 'ShulPad Contact <noreply@shulpad.com>', // Using your verified domain
+      to: ['info@shulpad.com'], // Your business email
       subject: `New ShulPad Inquiry from ${validatedData.name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -53,8 +47,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         ${validatedData.organization ? `<p><strong>Organization:</strong> ${validatedData.organization}</p>` : ''}
         <p><strong>Message:</strong></p>
         <p>${validatedData.message}</p>
+        
+        <hr>
+        <p><small>Reply to this customer at: ${validatedData.email}</small></p>
       `,
-      replyTo: validatedData.email
+      replyTo: validatedData.email // So you can reply directly to the customer
     });
 
     if (error) {
@@ -65,9 +62,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    console.log(`Contact form submission sent successfully. Email ID: ${data?.id}`);
-
-    // Return success response
     return res.json({ 
       success: true, 
       message: "Message sent successfully"
@@ -76,7 +70,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   } catch (error: unknown) {
     console.error("Contact form error:", error);
     
-    // Handle validation errors
     if (error instanceof z.ZodError) {
       return res.status(400).json({
         success: false,
@@ -85,7 +78,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    // Handle other errors
     return res.status(500).json({ 
       success: false, 
       message: "Failed to send message. Please try again." 
