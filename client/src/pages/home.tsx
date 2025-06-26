@@ -20,7 +20,7 @@ export default function Home() {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -28,7 +28,7 @@ export default function Home() {
         }
       });
     }, observerOptions);
-    
+
     // Observe all fade-in-up elements
     document.querySelectorAll('.fade-in-up').forEach(el => {
       observer.observe(el);
@@ -55,27 +55,15 @@ export default function Home() {
   }, []);
 
   return (
-  <div className="min-h-screen">
-    <Navigation />
-    <Hero />
-     <Demo />
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <Demo />
       <Technical />
-    <Benefits />
-   
-    <div className="hidden md:block">
-      <Features />
+      <Pricing />
+      <FAQ />
+      <Footer />
+      <WhatsAppWidget />
     </div>
-    
-    <div className="hidden md:block">
-      <SocialProof />
-    </div>
-    
-    <Pricing />
-   
-    <FAQ />
-    <CTA />
-    <Footer />
-    <WhatsAppWidget /> 
-  </div>
-);
+  );
 }

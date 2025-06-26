@@ -344,8 +344,9 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
-  /* Scoped pricing section variables to match reference design */
+/* Complete industry-standard pricing section - like Stripe/Notion/Figma */
 .pricing-section {
+  /* All your existing CSS variables */
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(240, 10%, 3.9%);
   --card: hsl(0, 0%, 100%);
@@ -366,6 +367,10 @@
   --input: hsl(240, 5.9%, 90%);
   --ring: hsl(221, 83%, 53%);
   --radius: 1rem;
+  
+  /* Clean, simple background - like the giants use */
+  background: #ffffff;
+  /* OR if you want very subtle: background: #fafbfc; */
 }
 
 /* Dark mode overrides for pricing section */
@@ -389,6 +394,55 @@
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
   --ring: hsl(217, 91%, 60%);
+}
+
+/* Clean white cards with minimal styling - Popular/Featured Plan */
+.pricing-section .border-primary {
+  background: #ffffff;
+  border: 2px solid #3b82f6; /* Clean blue border for popular plan */
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.pricing-section .border-primary:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Clean white cards with minimal styling - Regular Plans */
+.pricing-section .border-border\/40 {
+  background: #ffffff;
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.pricing-section .border-border\/40:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+/* Clean button effects - Popular Plan Buttons */
+.pricing-section .border-primary .bg-primary {
+  transition: all 0.2s ease;
+}
+
+.pricing-section .border-primary:hover .bg-primary {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+/* Clean button effects - Regular Plan Buttons */
+.pricing-section .border-border\/40 .bg-muted {
+  transition: all 0.2s ease;
+}
+
+.pricing-section .border-border\/40:hover .bg-muted {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 }
 

@@ -172,103 +172,99 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Desktop: Glassmorphism pill-shaped navbar */}
-        <div className="hidden md:flex justify-center w-full">
-          <div className="flex items-center premium-glassmorphism backdrop-blur-xl rounded-full shadow-2xl border border-white/30 px-8 py-4 space-x-8 hover:shadow-3xl transition-all duration-300 max-w-4xl my-2">
-            {/* Logo */}
-            <div 
-              className="flex items-center space-x-2 cursor-pointer group transition-all duration-300 hover:scale-105"
-              onClick={scrollToTop}
-            >
-              <img 
-                src="/attached_assets/Charity Pad Logo Square_1750274378262.png" 
-                alt="ShulPad Logo" 
-                className="w-8 h-8 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
-              />
-              <span 
-                className="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-purple-700" 
-                style={{fontFamily: "'EB Garamond', serif"}}
-              >
-                ShulPad
-              </span>
-            </div>
+<div className="hidden md:flex justify-center w-full">
+  <div className="flex items-center premium-glassmorphism backdrop-blur-xl rounded-full shadow-2xl border border-white/30 px-6 py-2.5 space-x-6 hover:shadow-3xl transition-all duration-300 max-w-4xl my-1">
+    {/* Logo */}
+    <div 
+      className="flex items-center space-x-2 cursor-pointer group transition-all duration-300 hover:scale-105"
+      onClick={scrollToTop}
+    >
+      <img 
+        src="/attached_assets/Charity Pad Logo Square_1750274378262.png" 
+        alt="ShulPad Logo" 
+        className="w-7 h-7 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
+      />
+      <span 
+        className="text-lg font-semibold text-gray-900 transition-all duration-300 group-hover:text-purple-700" 
+        style={{fontFamily: "'EB Garamond', serif"}}
+      >
+        ShulPad
+      </span>
+    </div>
 
-            {/* Separator */}
-            <div className="w-px h-6 bg-gray-200"></div>
-            
-            {/* Navigation Links */}
-            <div className="flex items-center space-x-6">
-              <a 
-                href="/#features" 
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium px-3 py-2 rounded-full hover:bg-blue-50"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // If we're not on the home page, navigate there first
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#features';
-                  } else {
-                    const element = document.querySelector('#features');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                }}
-              >
-                Features
-              </a>
-              <a 
-                href="/#pricing" 
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium px-3 py-2 rounded-full hover:bg-blue-50"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // If we're not on the home page, navigate there first
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#pricing';
-                  } else {
-                    const element = document.querySelector('#pricing');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                }}
-              >
-                Pricing
-              </a>
-              <a 
-                href="/#faq" 
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium px-3 py-2 rounded-full hover:bg-blue-50"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // If we're not on the home page, navigate there first
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#faq';
-                  } else {
-                    const element = document.querySelector('#faq');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                }}
-              >
-                FAQ
-              </a>
-            </div>
+    {/* Separator */}
+    <div className="w-px h-5 bg-gray-200"></div>
+    
+    {/* Navigation Links */}
+    <div className="flex items-center space-x-4">
+      <a 
+        href="/#features" 
+        className="text-gray-600 hover:text-blue-600 transition-colors font-medium px-2.5 py-1.5 rounded-full hover:bg-blue-50"
+        onClick={(e) => {
+          e.preventDefault();
+          if (window.location.pathname !== '/') {
+            window.location.href = '/#features';
+          } else {
+            const element = document.querySelector('#features');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }}
+      >
+        Features
+      </a>
+      <a 
+        href="/#pricing" 
+        className="text-gray-600 hover:text-blue-600 transition-colors font-medium px-2.5 py-1.5 rounded-full hover:bg-blue-50"
+        onClick={(e) => {
+          e.preventDefault();
+          if (window.location.pathname !== '/') {
+            window.location.href = '/#pricing';
+          } else {
+            const element = document.querySelector('#pricing');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }}
+      >
+        Pricing
+      </a>
+      <a 
+        href="/#faq" 
+        className="text-gray-600 hover:text-blue-600 transition-colors font-medium px-2.5 py-1.5 rounded-full hover:bg-blue-50"
+        onClick={(e) => {
+          e.preventDefault();
+          if (window.location.pathname !== '/') {
+            window.location.href = '/#faq';
+          } else {
+            const element = document.querySelector('#faq');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }}
+      >
+        FAQ
+      </a>
+    </div>
 
-            {/* Separator */}
-            <div className="w-px h-6 bg-gray-200"></div>
+    {/* Separator */}
+    <div className="w-px h-5 bg-gray-200"></div>
 
-            {/* CTA Button */}
-            <Button 
-              asChild
-              className="brand-gradient text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-            >
-              <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10">Start Free Trial</span>
-              </a>
-            </Button>
-          </div>
-        </div>
-      </nav>
+    {/* CTA Button */}
+    <Button 
+      asChild
+      className="brand-gradient text-white px-5 py-2 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+    >
+      <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+        <span className="relative z-10">Start Free Trial</span>
+      </a>
+    </Button>
+  </div>
+</div>
+</nav>
 
       {/* Backdrop Overlay */}
       <div 
