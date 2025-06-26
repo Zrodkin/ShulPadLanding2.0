@@ -3,7 +3,16 @@
   "outputDirectory": "dist/public",
   "framework": null,
   "installCommand": "npm install",
+  "functions": {
+    "server/index.ts": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/server/index.ts"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
