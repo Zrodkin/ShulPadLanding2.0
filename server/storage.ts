@@ -1,4 +1,5 @@
-import { users, type User, type InsertUser } from "@shared/schema";
+// Update the import path below to the correct relative path where your schema is defined
+import { users, type User, type InsertUser } from "../shared/schema";
 
 // modify the interface with any CRUD methods
 // you might need

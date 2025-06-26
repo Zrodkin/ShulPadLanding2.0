@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "What are the processing fees?",
-    answer: "Square charges 2.6% + 10¢ per transaction for in-person card payments. There are no additional fees from ShulPad beyond your monthly subscription. All fees are transparently displayed to donors.",
+    answer: "Square charges 2.6% + 15¢ per transaction for in-person card payments. There are no additional fees from ShulPad beyond your monthly subscription. All fees are transparently displayed to donors.",
     priority: true
   },
   {
