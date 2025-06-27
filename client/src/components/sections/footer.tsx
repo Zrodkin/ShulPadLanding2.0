@@ -58,13 +58,13 @@ export default function MobileOptimizedFooter() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://twitter.com/shulpadhq" 
+                href="https://x.com/shulpadhq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Follow ShulPad on X"
               >
-                <Twitter className="w-5 h-5" />
+                <X className="w-5 h-5" />
               </a>
               <a 
                 href="https://linkedin.com/company/shulpad" 
@@ -91,7 +91,7 @@ export default function MobileOptimizedFooter() {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Follow ShulPad on Instagram"
               >
-                < X className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
