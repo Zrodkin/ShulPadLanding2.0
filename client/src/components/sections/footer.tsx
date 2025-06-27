@@ -1,4 +1,5 @@
-import { Twitter, Linkedin, Facebook, Instagram, X } from "lucide-react";
+import React from 'react';
+import { Linkedin, Facebook, Instagram } from "lucide-react";
 
 const footerSections = [
   {
@@ -11,9 +12,9 @@ const footerSections = [
     ]
   },
   {
-    title: "Support", 
+    title: "Support",
     links: [
-      { name: "Contact Us", href: "/contact" },  // ← Updated to real page
+      { name: "Contact Us", href: "/contact" },
       { name: "WhatsApp", href: "https://wa.me/16179032387" },
       { name: "Phone Support", href: "tel:+16179032387" },
       { name: "Schedule Demo", href: "mailto:info@shulpad.com?subject=Demo Request" }
@@ -32,16 +33,32 @@ const footerSections = [
 
 const legalLinks = [
   { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms", href: "/terms" },  // ← Updated to real page
+  { name: "Terms", href: "/terms" },
   { name: "Contact Legal", href: "mailto:info@shulpad.com?subject=Legal Inquiry" }
 ];
+
+// Custom SVG component for the X logo
+const XLogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 1200 1227"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    fill="currentColor"
+    {...props}
+  >
+    <path
+      d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6904H306.615L611.412 515.685L658.88 583.579L1055.08 1150.31H892.476L569.165 687.854V687.828Z"
+    />
+  </svg>
+);
+
 
 export default function MobileOptimizedFooter() {
   return (
     <footer className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         
-        {/* Desktop Layout: 4-column grid (original) */}
+        {/* Desktop Layout: 4-column grid */}
         <div className="hidden md:grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
@@ -64,7 +81,7 @@ export default function MobileOptimizedFooter() {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Follow ShulPad on X"
               >
-                <X className="w-5 h-5" />
+                <XLogoIcon className="w-5 h-5" />
               </a>
               <a 
                 href="https://linkedin.com/company/shulpad" 
@@ -138,13 +155,13 @@ export default function MobileOptimizedFooter() {
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
               <a 
-                href="https://twitter.com/shulpad"
+                href="https://x.com/shulpadhq"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors p-2 -m-2"
-                aria-label="Follow us on Twitter"
+                aria-label="Follow us on X"
               >
-                <Twitter className="w-5 h-5" />
+                <XLogoIcon className="w-5 h-5" />
               </a>
               <a 
                 href="https://linkedin.com/company/shulpad"
