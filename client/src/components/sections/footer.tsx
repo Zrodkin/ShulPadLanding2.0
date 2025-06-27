@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Facebook, Instagram } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram, X } from "lucide-react";
 
 const footerSections = [
   {
@@ -91,7 +91,7 @@ export default function MobileOptimizedFooter() {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Follow ShulPad on Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                < X className="w-5 h-5" />
               </a>
             </div>
           </div>
