@@ -118,9 +118,9 @@ export default function HardwareBuyingPage() {
           <div className="w-16 h-16 border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-8">
             <Check className="w-6 h-6 text-gray-900" />
           </div>
-          <h2 className="text-2xl font-light text-gray-900 mb-4">Request Information</h2>
+          <h2 className="text-2xl font-light text-gray-900 mb-4">Thank you</h2>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            We'll contact you with pricing and availability details.
+            We've received your request and will contact you within 24 hours with pricing details.
           </p>
           <button
             onClick={() => window.location.href = '/'}
@@ -251,7 +251,7 @@ export default function HardwareBuyingPage() {
             <div className="sticky top-8">
               {selectedOption ? (
                 <div className="border border-gray-200 p-8">
-                  <h3 className="text-lg font-light text-gray-900 mb-8">Send Inquiry</h3>
+                  <h3 className="text-lg font-light text-gray-900 mb-8">Request Quote</h3>
 
                   {/* Selected Item Summary */}
                   <div className="mb-8 pb-8 border-b border-gray-100">
@@ -302,7 +302,7 @@ export default function HardwareBuyingPage() {
                         ${(selectedOption.price * quantity).toLocaleString()}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">For reference only</p>
+                    <p className="text-xs text-gray-500 mt-2">Final pricing confirmed via email</p>
                   </div>
 
                   {/* Contact Form */}
