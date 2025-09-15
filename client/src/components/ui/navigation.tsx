@@ -259,7 +259,7 @@ export default function Navigation() {
       className="brand-gradient text-white px-5 py-2 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25"
     >
       <a href="https://apps.apple.com/us/app/shulpad/id6746584703" target="_blank" rel="noopener noreferrer">
-        <span className="relative z-10">Download Now</span>
+        <span className="relative z-10">Download</span>
       </a>
     </Button>
   </div>
