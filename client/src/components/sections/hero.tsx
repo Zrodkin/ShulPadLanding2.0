@@ -123,8 +123,8 @@ export default function Hero() {
               asChild
               className="brand-gradient text-white px-16 py-6 rounded-full hover:opacity-90 transition-all duration-400 ease-out text-lg font-semibold shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 glow-effect"
             >
-              <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10">Start Free Trial</span>
+              <a href="https://apps.apple.com/us/app/shulpad/id6746584703" target="_blank" rel="noopener noreferrer">
+                <span className="relative z-10">Download Now</span>
               </a>
             </Button>
           </div>
@@ -152,8 +152,8 @@ export default function Hero() {
                 asChild
                 className="brand-gradient text-white px-12 py-7 rounded-full hover:opacity-90 transition-all duration-300 text-lg font-semibold shadow-2xl hover:shadow-purple-500/25 hover:scale-105 glow-effect"
               >
-                <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
-                  <span className="relative z-10">Start Free Trial</span>
+                <a href="https://apps.apple.com/us/app/shulpad/id6746584703" target="_blank" rel="noopener noreferrer">
+                  <span className="relative z-10">Download Now</span>
                 </a>
               </Button>
           <Button 

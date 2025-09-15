@@ -258,8 +258,8 @@ export default function Navigation() {
       asChild
       className="brand-gradient text-white px-5 py-2 rounded-full hover:opacity-90 transition-all duration-300 font-medium hover:scale-105 shadow-lg hover:shadow-purple-500/25"
     >
-      <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
-        <span className="relative z-10">Start Free Trial</span>
+      <a href="https://apps.apple.com/us/app/shulpad/id6746584703" target="_blank" rel="noopener noreferrer">
+        <span className="relative z-10">Download Now</span>
       </a>
     </Button>
   </div>
@@ -332,7 +332,7 @@ export default function Navigation() {
                 className="w-full brand-gradient text-white py-4 rounded-xl hover:opacity-90 transition-all duration-300 font-medium shadow-lg"
               >
                 <a 
-                  href="https://testflight.apple.com/join/HxUmsRNP" 
+                  href="https://apps.apple.com/us/app/shulpad/id6746584703" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}

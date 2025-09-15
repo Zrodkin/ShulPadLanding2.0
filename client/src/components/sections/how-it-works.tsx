@@ -80,7 +80,7 @@ export default function HowItWorks() {
     asChild
     className="brand-gradient text-white px-12 py-6 rounded-full hover:opacity-90 transition-opacity text-lg font-semibold shadow-lg"
   >
-    <a href="https://testflight.apple.com/join/HxUmsRNP" target="_blank" rel="noopener noreferrer">
+    <a href="https://apps.apple.com/us/app/shulpad/id6746584703" target="_blank" rel="noopener noreferrer">
       Get Started Now
     </a>
   </Button>
